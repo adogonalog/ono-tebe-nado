@@ -36,12 +36,10 @@
 
 .nav-item {
   list-style: circle;
+  border-bottom: 1px solid black;
+  padding-bottom: 1px;
 }
 
-.underlined {
-  border-bottom: 1px solid black;
-  padding-bottom: 2px;
-}
 
 .contacts {
   max-width: 240px;
@@ -50,14 +48,23 @@
 
 .contacts-item {
   list-style: none;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+
 }
 
-.nav-link, .contacts-link {
+.nav-link {
   text-decoration: none;
 }
 
-.nav-item_active,
-.contacts-item_active {
+.nav-item.active,
+.contacts-item.active {
+  
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.nav-item.main-link {
   list-style: none;
 }
 
@@ -67,63 +74,54 @@
   gap: 180px;
 }
 
-/* section ono-tebe-nado */
+/* section cover */
 
-.section__ono-tebe-nado {
-  height: 757px;
+.section__cover {
+  min-height: 757px;
   background: url(../images/cover.jpg);
   background-size: cover;
 }
 
-.section__ono-tebe-nado__wrapper {
-  height: 757px;
+.section__cover__wrapper {
+  min-height: 757px;
   background-color: rgb(255 255 255 / 0);
   backdrop-filter: brightness(40%);
 }
 
-.section__ono-tebe-nado__grid {
-  padding: 167px 50px 128px 50px;
+.section__cover__container {
+  padding: 165px 50px 125px 50px;
 }
 
 .h1 {
   font-size: 100px;
-  line-height: 115px;
- 
+  line-height: 122px;
   text-transform: uppercase;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  column-gap: 24px;
-  row-gap: 8px;
 }
 
 .span-line-1 {
   display: flex;
   align-items: center;
-  grid-column: 1/1;
-  grid-row: 1/1;
 }
 
 .span-line-2 {
+  max-width: 1280px;
   display: flex;
   align-items: center;
-  grid-column: 2/2;
-  grid-row: 2/2;
+  justify-content: center;
+  text-align: center;
 }
 
 .span-line-3 {
   display: flex;
   align-items: center;
   justify-content: end;
-  grid-column: 3/4;
-  grid-row: 3/4;
 }
 
-.text-30 {
+.letter-spacing {
   letter-spacing: 30px;
 }
 
-.text-60 {
+.letter-spacing-extended {
   letter-spacing: 60px;
 }
 
@@ -136,7 +134,7 @@
   align-items: center;
   justify-content: end;
   gap: 78px;
-  padding: 0 50px;
+  padding: 0 50px 50px 50px;
 }
 
 .bid__description {
@@ -152,6 +150,7 @@
   border: 1px solid #fff;
   color: #fff;
   background-color: rgb(255 255 255 / 0);
+  cursor: pointer;
 }
 
 /* Section lots */
@@ -169,35 +168,32 @@
   padding-left: 40px;
 }
 
-.section__lots__cards {
+.section__lots-cards {
   display: flex;
   gap: 25px;
   justify-content: center;
 }
 
-.section__lots__card {
+.card {
   width: 430px;
-  height: 450px;
-  
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.card-1 {
+.card_type_film {
   background-image: url(../images/card-lot-01.jpg);
 }
 
-.card-2 {
+.card_type_book {
   background-image: url(../images/card-lot-02.jpg);
 }
 
-.card-3 {
+.card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
 }
 
-.section__lots__card-wrapper {
-  height: 450px;
+.lots-card-wrapper {
   width: 430px;
   padding: 50px 40px;
   background-color: rgb(255 255 255 / 0);
@@ -230,6 +226,8 @@
 .link__view-more {
   text-decoration: none;
   margin-left: 40px;
+  border-bottom: 1px #000 solid;
+  padding-bottom: 1px;
 }
 
 /* Section about */
@@ -251,7 +249,7 @@
   width: 240px;
   height: 240px;
   background-color: black;
-  background-image: url(/images/logo-white.svg);
+  background-image: url(../images/logo-white.svg);
   background-size: 148px;
   background-repeat: no-repeat;
   background-position: center;
@@ -279,6 +277,7 @@
 
 .footer__contacts {
   width: 240px;
+  line-height: 135%;
 }
 
 .footer__nav-menu {
@@ -286,9 +285,14 @@
   text-align: center;
 }
 
-.footer__underlined {
+.footer__nav-item {
   border-bottom: 1px solid black;
   padding-bottom: 1px;
+}
+
+.footer__nav-item.active {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .social-media-list {
