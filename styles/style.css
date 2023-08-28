@@ -145,6 +145,7 @@
 
 .bid__button {
   font-size: 22px;
+  font-family: inherit;
   text-transform: uppercase;
   padding: 12px 32px;
   border: 1px solid #fff;
@@ -309,16 +310,4 @@
 .social-media-item {
   width: 48px;
   height: 48px;
-}
-
-.youtube {
-  background-image: url(../images/yt.svg);
-}
-
-.vk {
-  background-image: url(../images/vk.svg);
-}
-
-.pinterest {
-  background-image: url(../images/pinterest.svg);
 }
