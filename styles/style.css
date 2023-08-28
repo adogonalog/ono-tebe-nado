@@ -168,17 +168,22 @@
   padding-left: 40px;
 }
 
-.section__lots-cards {
+
+.lots__card-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
   justify-content: center;
 }
 
-.card {
-  width: 430px;
+.lots__card-item {
+  max-width: 430px;
+  min-height: 450px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  display: flex;
+  flex-grow: 1;
 }
 
 .card_type_film {
@@ -193,7 +198,7 @@
   background-image: url(../images/card-lot-03.jpg);
 }
 
-.lots-card-wrapper {
+.card-link {
   width: 430px;
   padding: 50px 40px;
   background-color: rgb(255 255 255 / 0);
